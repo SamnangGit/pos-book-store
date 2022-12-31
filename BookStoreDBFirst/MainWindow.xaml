@@ -1,0 +1,132 @@
+﻿<Window x:Class="BookStoreDBFirst.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookStoreDBFirst"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="870" Width="1535" WindowStyle="None" WindowState="Maximized">
+    <Grid Background="Black">
+        <Button VerticalAlignment="Top" HorizontalAlignment="Right" Name="btnClose" Click="btnClose_Click" BorderBrush="Transparent" Background="Transparent">
+            <Image Source="/close_black.png" Width="25" Height="25"></Image>
+        </Button>
+        <Border CornerRadius="20" Background="White" Margin="20,35,20,10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                    <ColumnDefinition Width="1*"></ColumnDefinition>
+                    <ColumnDefinition Width="4*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Row="0" Grid.Column="0" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"> VIEW </Label>
+                <Label Grid.Row="0" Grid.Column="2" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"> OPERATION </Label>
+                <Border Grid.Row="1" Grid.Column="0" Height="330" CornerRadius="20" BorderBrush="Black" BorderThickness="1" Background="Transparent" Margin="15">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" Margin="30,15,15,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="Transparent" Background="Transparent" Name="btnCustomerView" Click="btnCustomerView_Click">
+                            <Image Source="/customer.png" Width="100" Height="100"></Image>
+                        </Button>
+                        <Label Grid.Row="1" Grid.Column="0" Margin="40,0,15,0" FontSize="16">Customer</Label>
+                        <Button Grid.Row="0" Grid.Column="1" Margin="30,15,15,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="Transparent" Background="Transparent" Name="btnEmployeeView" Click="btnEmployeeView_Click">
+                            <Image Source="/employee.png" Width="100" Height="100"></Image>
+                        </Button>
+                        <Label Grid.Row="1" Grid.Column="1" Margin="40,0,15,0" FontSize="16">Employee</Label>
+                        <Button Grid.Row="0" Grid.Column="2" Margin="30,15,15,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="Transparent" Background="Transparent" Name="btnBookView" Click="btnBookView_Click">
+                            <Image Source="/book.png" Width="100" Height="100"></Image>
+                        </Button>
+                        <Label Grid.Row="1" Grid.Column="2" Margin="55,0,15,0" FontSize="16">Book</Label>
+                        <Button Grid.Row="0" Grid.Column="3" Margin="10,15,30,0" HorizontalAlignment="Right" VerticalAlignment="Top" BorderBrush="Transparent" Background="Transparent" Name="btnRecordView" Click="btnRecordView_Click">
+                            <Image Source="/record.png" Width="100" Height="100"></Image>
+                        </Button>
+                        <Label Grid.Row="1"  Grid.Column="3" Margin="40,0,60,0" FontSize="16" HorizontalAlignment="Right">Record</Label>
+                        <Button Grid.Row="2" Grid.Column="1" Margin="15,25,15,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="Transparent" Background="Transparent" Name="btnSaleView">
+                            <Image Source="/sale.png" Width="100" Height="100"></Image>
+                        </Button>
+                        <Label Grid.Row="3" Grid.Column="1" Margin="40,0,15,0" FontSize="16">Sale</Label>
+                        <Button Grid.Row="2" Grid.Column="2" Margin="15,25,15,0" HorizontalAlignment="Right" VerticalAlignment="Top" BorderBrush="Transparent" Background="Transparent" Name="btnBestSellerView">
+                            <Image Source="/best_seller.png" Width="100" Height="100"></Image>
+                        </Button>
+                        <Label Grid.Row="3" Grid.Column="2" Margin="20,0,25,0" FontSize="16" HorizontalAlignment="Right">Best Seller</Label>
+                    </Grid>
+                </Border>
+                
+                <Border Grid.Row="1" Grid.Column="2" Height="330" CornerRadius="20" BorderBrush="Black" BorderThickness="1" Background="Transparent" Margin="15">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Button Grid.Row="0" Grid.Column="0" Margin="30,15,15,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="Transparent" Background="Transparent" Name="btnCustomerOP" Click="btnCustomerOP_Click">
+                            <Image Source="/customer.png" Width="100" Height="100"></Image>
+                        </Button>
+                        <Label Grid.Row="1" Grid.Column="0" Margin="40,0,15,0" FontSize="16">Customer</Label>
+                        <Button Grid.Row="0" Grid.Column="1" Margin="30,15,15,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="Transparent" Background="Transparent" Name="btnEmployeeOP" Click="btnEmployeeOP_Click">
+                            <Image Source="/employee.png" Width="100" Height="100"></Image>
+                        </Button>
+                        <Label Grid.Row="1" Grid.Column="1" Margin="40,0,15,0" FontSize="16">Employee</Label>
+                        <Button Grid.Row="0" Grid.Column="2" Margin="30,15,15,0" HorizontalAlignment="Left" VerticalAlignment="Top" BorderBrush="Transparent" Background="Transparent" Name="btnBookOP" Click="btnBookOP_Click">
+                            <Image Source="/book.png" Width="100" Height="100"></Image>
+                        </Button>
+                        <Label Grid.Row="1" Grid.Column="2" Margin="55,0,15,0" FontSize="16">Book</Label>
+                        <Button Grid.Row="0" Grid.Column="3" Margin="10,15,30,0" HorizontalAlignment="Right" VerticalAlignment="Top" BorderBrush="Transparent" Background="Transparent" Name="btnRecordOP">
+                            <Image Source="/record.png" Width="100" Height="100"></Image>
+                        </Button>
+                        <Label Grid.Row="1" Grid.Column="3" Margin="40,0,60,0" FontSize="16" HorizontalAlignment="Right">Record</Label>
+                        <Button Grid.Row="2" Grid.Column="1" Margin="15,25,15,0" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Top" BorderBrush="Transparent" Background="Transparent" Name="btnSaleOP">
+                            <Image Source="/sale.png" Width="100" Height="100"></Image>
+                        </Button>
+                        <Label Grid.Row="3" Grid.Column="1" Margin="25,0,30,0" Grid.ColumnSpan="2" FontSize="16" HorizontalAlignment="Center">Sale</Label>
+                    </Grid>
+                </Border>
+
+                <Border Grid.Row="1" Grid.Column="1" HorizontalAlignment="Center" BorderBrush="Black" BorderThickness="1" Background="Transparent" CornerRadius="20">
+                    <Grid Margin="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+                        <Label Grid.Row="0" FontSize="28" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10">POS</Label>
+                        <Button Grid.Row="1" BorderBrush="Transparent" Background="Transparent" Name="btnPOSSell" Click="btnPOSSell_Click">
+                            <Image Source="/sell.png" Width="100" Height="100"></Image>
+                        </Button>
+                        <Label Grid.Row="2" FontSize="16" HorizontalAlignment="Center">Sell</Label>
+                        <Button Grid.Row="3" BorderBrush="Transparent" Background="Transparent" Name="btnPOSPurchase">
+                            <Image Source="/purchase.png" Width="100" Height="100"></Image>
+                        </Button>
+                        <Label Grid.Row="4" FontSize="16" HorizontalAlignment="Center">Purchase</Label>
+                    </Grid>
+                </Border>
+            </Grid>
+        </Border>
+
+
+    </Grid>
+</Window>

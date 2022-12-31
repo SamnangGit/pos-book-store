@@ -1,0 +1,40 @@
+﻿<Window x:Class="BookStoreDBFirst.LoginWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BookStoreDBFirst"
+        mc:Ignorable="d"
+        Title="LoginWindow" Height="870" Width="1535" WindowStyle="None" WindowState="Maximized"> 
+    <Grid Background="Black">
+        <Button VerticalAlignment="Top" HorizontalAlignment="Right" Name="btnClose" Click="btnClose_Click" BorderBrush="Transparent" Margin="5" Background="Transparent">
+            <Image Source="/close_black.png" Width="40" Height="40"></Image>
+        </Button>
+        <Border CornerRadius="20"  HorizontalAlignment="Center" Width="600" Height="800" Background="White">
+            <DockPanel>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                        <RowDefinition Height="Auto"></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <Image Grid.Row="0" Source="/login_avatar.png" Width="150" Height="150" Margin="50" HorizontalAlignment="Center"></Image>
+                    <Border  Grid.Row="1" Width="420" Height="60" Margin="10,100,10,10" BorderThickness="2" BorderBrush="Black" CornerRadius="20">
+                        <TextBox FontSize="26" TextAlignment="Center" Padding="0,10,0,0" Name="txtName" Background="Transparent" BorderBrush="Transparent"></TextBox>
+                    </Border>
+                    <Border  Grid.Row="2" Width="420" Height="60" Margin="10,20,10,10" BorderThickness="2" BorderBrush="Black" CornerRadius="20">
+                        <PasswordBox FontSize="26" HorizontalContentAlignment="Center" Padding="0,10,0,0" Name="txtPassword" Background="Transparent" BorderBrush="Transparent"></PasswordBox>
+                    </Border>
+                    <Button Grid.Row="3" Margin="10,80,10,10" Width="110" Height="100" HorizontalAlignment="Center" BorderBrush="Transparent" Background="Transparent" Name="btnLogin" Click="btnLogin_Click">
+                        <Image Source="/enter.png" Width="110" Height="100"></Image>
+                    </Button>
+                    <Button Grid.Row="4" HorizontalAlignment="Right" VerticalAlignment="Bottom" FontSize="20" FontStretch="UltraExpanded" Background="Transparent" BorderBrush="Transparent" Margin="0,50,30,10" Name="btnRegister">Register</Button>
+                </Grid>
+            </DockPanel>
+        </Border>
+ 
+    </Grid>
+</Window>
